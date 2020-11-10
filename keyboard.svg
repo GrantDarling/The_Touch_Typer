@@ -290,6 +290,12 @@
             <text class="enter__text" x="60" y="45">enter</text>
         </g>
 
+        <!-- Enter Key -->
+        <g id="enter__group" class="keys" data-name="enter__group" transform="translate(1276 837)">
+            <rect class="enter__key" width="106" height="60" rx="9" />
+            <text class="enter__text" x="60" y="45">enter</text>
+        </g>
+
 
 
 
