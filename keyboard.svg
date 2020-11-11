@@ -1,3 +1,7 @@
+<p>Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.</p>
+<p id="log"></p>
+
+
 <svg xmlns="http://www.w3.org/2000/svg" width="920" height="314" viewBox="0 0 913 314">
     <!-- viewBox="0 0 913 314" -->
     <defs>
@@ -317,7 +321,7 @@
         </g>
 
         <!-- B Key -->
-        <g id="b__group" class="keys" data-name="b__group" transform="translate(865 899)">
+        <g id="b__group" class="keys" data-name="KeyB" transform="translate(865 899)">
             <rect id="b__key" width="60" height="60" rx="8.5" />
             <text class="b__text" x="25" y="35">B</text>
         </g>
