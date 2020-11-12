@@ -1,0 +1,22 @@
+{
+  "name": "the_touch_typer",
+  "version": "1.0.0",
+  "description": "a touch typing educational game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrantDarling/The_Touch_Typer.git"
+  },
+  "author": "Grant Darling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrantDarling/The_Touch_Typer/issues"
+  },
+  "homepage": "https://github.com/GrantDarling/The_Touch_Typer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -7,9 +7,9 @@ const findKey = (e, fillColor) => {
         }
   });
 }
+
 const keyDown = (e) => findKey(e, "red");
 const keyUp = (e) => findKey(e, "#1d1d1d");
 
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
-  
