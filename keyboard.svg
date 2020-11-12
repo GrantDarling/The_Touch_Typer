@@ -26,98 +26,98 @@
         <!-- NUMERIC ROW -->
 
         <!-- Tilde Key -->
-        <g id="tilde__group" class="keys" data-name="tilde__group" transform="translate(473 713)">
+        <g id="tilde__group" class="keys" data-name="192" transform="translate(473 713)">
             <rect id="tilde__key" x="0.5" y="0.5" width="59" height="59" rx="8.5" />
             <text id="tilde__text" x="25" y="25">~</text>
             <text id="tilde__text" x="25" y="45">`</text>
         </g>
 
         <!-- 1 Key -->
-        <g id="1__group" class="keys" data-name="1__group" transform="translate(536 713)">
+        <g id="1__group" class="keys" data-name="49" transform="translate(536 713)">
             <rect id="1__key" x="0.5" y="0.5" width="60" height="60" rx="8.5" stroke="pink" stroke-width="2" />
             <text class="1__text" x="26" y="25">!</text>
             <text class="1__text" x="25" y="45">1</text>
         </g>
 
         <!-- 2 Key -->
-        <g id="2__group" class="keys" data-name="2__group" transform="translate(599 713)">
+        <g id="2__group" class="keys" data-name="50" transform="translate(599 713)">
             <rect id="2__key" width="60" height="60" rx="8.5" />
             <text class="2__text" x="22" y="25">@</text>
             <text class="2__text" x="25" y="45">2</text>
         </g>
 
         <!-- 3 Key -->
-        <g id="3__group" class="keys" data-name="3__group" transform="translate(661 713)">
+        <g id="3__group" class="keys" data-name="51" transform="translate(661 713)">
             <rect id="3__key" width="60" height="60" rx="9" />
             <text class="3__text" x="25" y="25">#</text>
             <text class="3__text" x="25" y="45">3</text>
         </g>
 
         <!-- 4 Key -->
-        <g id="4__group" class="keys" data-name="4__group" transform="translate(724 713)">
+        <g id="4__group" class="keys" data-name="52" transform="translate(724 713)">
             <rect id="4__key" width="60" height="60" rx="9" />
             <text class="4__text" x="25" y="25">$</text>
             <text class="4__text" x="25" y="45">4</text>
         </g>
 
         <!-- 5 Key -->
-        <g id="5__group" class="keys" data-name="5__group" transform="translate(787 713)">
+        <g id="5__group" class="keys" data-name="53" transform="translate(787 713)">
             <rect id="5__key" width="60" height="60" rx="9" />
             <text class="5__text" x="23" y="25">%</text>
             <text class="5__text" x="25" y="45">5</text>
         </g>
 
         <!-- 6 Key -->
-        <g id="6__group" class="keys" data-name="6__group" transform="translate(851 713)">
+        <g id="6__group" class="keys" data-name="54" transform="translate(851 713)">
             <rect id="6__key" width="60" height="60" rx="9" />
             <text class="6__text" x="25" y="25">^</text>
             <text class="6__text" x="25" y="45">6</text>
         </g>
 
         <!-- 7 Key -->
-        <g id="7__group" class="keys" data-name="7__group" transform="translate(914 713)">
+        <g id="7__group" class="keys" data-name="55" transform="translate(914 713)">
             <rect id="7__key" width="60" height="60" rx="9" />
             <text class="7__text" x="23" y="25">&</text>
             <text class="7__text" x="25" y="45">7</text>
         </g>
 
         <!-- 8 Key -->
-        <g id="8__group" class="keys" data-name="8__group" transform="translate(976 713)">
+        <g id="8__group" class="keys" data-name="56" transform="translate(976 713)">
             <rect id="8__key" width="60" height="60" rx="9" />
             <text class="8__text" x="23" y="25">*</text>
             <text class="8__text" x="25" y="45">8</text>
         </g>
 
         <!-- 9 Key -->
-        <g id="9__group" class="keys" data-name="9__group" transform="translate(1039 713)">
+        <g id="9__group" class="keys" data-name="57" transform="translate(1039 713)">
             <rect id="9__key" width="60" height="60" rx="9" />
             <text class="9__text" x="24" y="24">(</text>
             <text class="9__text" x="25" y="45">9</text>
         </g>
 
         <!-- 0 Key -->
-        <g id="0__group" class="keys" data-name="0__group" transform="translate(1101 713)">
+        <g id="0__group" class="keys" data-name="48" transform="translate(1101 713)">
             <rect id="0__key" width="60" height="60" rx="8.5" />
             <text class="0__text" x="27" y="25">)</text>
             <text class="0__text" x="25" y="45">0</text>
         </g>
 
         <!-- Hyphen Key -->
-        <g id="hyphen__group" class="keys" datahyphenname="hyphen__group" transform="translate(1163 713)">
+        <g id="hyphen__group" class="keys" data-name="189" transform="translate(1163 713)">
             <rect id="hyphen__key" width="60" height="60" rx="8.5" />
             <text class="hyphen__text" x="27" y="25">_</text>
             <text class="hyphen__text" x="28" y="45">-</text>
         </g>
 
         <!-- Equal Key -->
-        <g id="equal__group" class="keys" data-name="equal__group" transform="translate(1225 713)">
+        <g id="equal__group" class="keys" data-name="187" transform="translate(1225 713)">
             <rect id="equal__key" class="keys" width="60" height="60" rx="8.5" />
             <text class="equal__text" x="27" y="25">+</text>
             <text class="equal__text" x="27" y="45">=</text>
         </g>
 
         <!-- Delete Key -->
-        <g id="delete__group" class="keys" data-name="delete__group" transform="translate(1287 713)">
+        <g id="delete__group" class="keys" data-name="8" transform="translate(1287 713)">
             <rect width="97" height="60" rx="9" />
             <text class="delete__text" x="45" y="45">delete</text>
         </g>
@@ -125,87 +125,87 @@
         <!-- TOP ROW -->
 
         <!-- Tab Key -->
-        <g id="tab__group" class="keys" data-name="tab__group" transform="translate(473 776)">
+        <g id="tab__group" class="keys" data-name="9" transform="translate(473 776)">
             <rect class="cls-2" width="93" height="58" rx="9" />
             <text class="tab__text" x="10" y="45">tab</text>
         </g>
 
         <!-- Q Key -->
-        <g id="q__group" class="keys" data-name="q__group" transform="translate(569 776)">
+        <g id="q__group" class="keys" data-name="81" transform="translate(569 776)">
             <rect id="q__key" width="60" height="60" rx="8.5" />
             <text class="q__text" x="25" y="35">Q</text>
         </g>
 
         <!-- W Key -->
-        <g id="w__group" class="keys" data-name="w__group" transform="translate(631 776)">
+        <g id="w__group" class="keys" data-name="87" transform="translate(631 776)">
             <rect id="w__key" width="60" height="60" rx="8.5" />
             <text class="w__text" x="25" y="35">W</text>
         </g>
 
         <!-- E Key -->
-        <g id="e__group" class="keys" data-name="e__group" transform="translate(694 776)">
+        <g id="e__group" class="keys" data-name="69" transform="translate(694 776)">
             <rect id="e__key" width="60" height="60" rx="8.5" />
             <text class="e__text" x="25" y="35">E</text>
         </g>
 
         <!-- R Key -->
-        <g id="r__group" class="keys" data-name="r__group" transform="translate(757 776)">
+        <g id="r__group" class="keys" data-name="82" transform="translate(757 776)">
             <rect id="r__key" width="60" height="60" rx="8.5" />
             <text class="r__text" x="25" y="35">R</text>
         </g>
 
         <!-- T Key -->
-        <g id="t__group" class="keys" data-name="t__group" transform="translate(819 776)">
+        <g id="t__group" class="keys" data-name="84" transform="translate(819 776)">
             <rect id="t__key" width="60" height="60" rx="8.5" />
             <text class="t__text" x="25" y="35">T</text>
         </g>
 
         <!-- Y Key -->
-        <g id="y__group" class="keys" data-name="y__group" transform="translate(882 776)">
+        <g id="y__group" class="keys" data-name="89" transform="translate(882 776)">
             <rect id="y__key" width="60" height="60" rx="8.5" />
             <text class="y__text" x="25" y="35">Y</text>
         </g>
 
         <!-- U Key -->
-        <g id="u__group" class="keys" data-name="u__group" transform="translate(944 776)">
+        <g id="u__group" class="keys" data-name="85" transform="translate(944 776)">
             <rect id="u__key" width="60" height="60" rx="8.5" />
             <text class="u__text" x="25" y="35">U</text>
         </g>
 
         <!-- I Key -->
-        <g id="i__group" class="keys" data-name="i__group" transform="translate(1008 776)">
+        <g id="i__group" class="keys" data-name="73" transform="translate(1008 776)">
             <rect id="i__key" width="60" height="60" rx="8.5" />
             <text class="i__text" x="25" y="35">I</text>
         </g>
 
         <!-- O Key -->
-        <g id="o__group" class="keys" data-name="o__group" transform="translate(1071 776)">
+        <g id="o__group" class="keys" data-name="79" transform="translate(1071 776)">
             <rect id="o__key" width="60" height="60" rx="8.5" />
             <text class="o__text" x="25" y="35">O</text>
         </g>
 
         <!-- P Key -->
-        <g id="p__group" class="keys" data-name="p__group" transform="translate(1133 776)">
+        <g id="p__group" class="keys" data-name="80" transform="translate(1133 776)">
             <rect id="p__key" width="60" height="60" rx="8.5" />
             <text class="p__text" x="25" y="35">P</text>
         </g>
 
         <!-- Left Brace Key -->
-        <g id="left_brace__group" class="keys" data-name="left_brace__group" transform="translate(1197 776)">
+        <g id="left_brace__group" class="keys" data-name="219" transform="translate(1197 776)">
             <rect id="left_brace__key" width="60" height="60" rx="8.5" />
             <text class="left_brace__text" x="25" y="25">{</text>
             <text class="left_brace__text" x="27" y="45">[</text>
         </g>
 
         <!-- Right Brace Key -->
-        <g id="right_brace__group" class="keys" data-name="right_brace__group" transform="translate(1259 776)">
+        <g id="right_brace__group" class="keys" data-name="221" transform="translate(1259 776)">
             <rect id="right_brace__key" width="60" height="60" rx="8.5" />
             <text class="right_brace__text" x="25" y="25">}</text>
             <text class="right_brace__text" x="25" y="45">]</text>
         </g>
 
         <!-- Forward Slash Key -->
-        <g id="forward_slash__group" class="keys" data-name="forward_slash__group" transform="translate(1322 776)">
+        <g id="forward_slash__group" class="keys" data-name="220" transform="translate(1322 776)">
             <rect id="forward_slash__key" width="60" height="60" rx="8.5" />
             <text class="forward_slash__text" x="25" y="25">|</text>
             <text class="forward_slash__text" x="25" y="45">\</text>
@@ -214,175 +214,178 @@
         <!-- MIDDLE ROW -->
 
         <!-- Caps Lock Key -->
-        <g id="caps_lock__group" class="keys" data-name="caps_lock__group" transform="translate(473 837)">
+        <g id="caps_lock__group" class="keys" data-name="20" transform="translate(473 837)">
             <rect class="cls-2" width="106" height="60" rx="9" />
             <text class="caps_lock__text" x="10" y="45">caps lock</text>
         </g>
 
         <!-- A Key -->
-        <g id="a__group" class="keys" data-name="a__group" transform="translate(583 837)">
+        <g id="a__group" class="keys" data-name="65" transform="translate(583 837)">
             <rect id="a__key" width="60" height="60" rx="8.5" />
             <text class="a__text" x="25" y="35">A</text>
         </g>
 
         <!-- S Key -->
-        <g id="s__group" class="keys" data-name="s__group" transform="translate(647 837)">
+        <g id="s__group" class="keys" data-name="83" transform="translate(647 837)">
             <rect id="s__key" width="60" height="60" rx="8.5" />
             <text class="s__text" x="25" y="35">S</text>
         </g>
 
         <!-- D Key -->
-        <g id="d__group" class="keys" data-name="d__group" transform="translate(709 837)">
+        <g id="d__group" class="keys" data-name="68" transform="translate(709 837)">
             <rect id="d__key" width="60" height="60" rx="8.5" />
             <text class="d__text" x="25" y="35">D</text>
         </g>
 
         <!-- F Key -->
-        <g id="f__group" class="keys" data-name="d__group" transform="translate(772 837)">
+        <g id="f__group" class="keys" data-name="70" transform="translate(772 837)">
             <rect id="f__key" width="60" height="60" rx="8.5" />
             <text class="f__text" x="25" y="35">F</text>
         </g>
 
         <!-- G Key -->
-        <g id="g__group" class="keys" data-name="g__group" transform="translate(836 837)">
+        <g id="g__group" class="keys" data-name="71" transform="translate(836 837)">
             <rect id="g__key" width="60" height="60" rx="8.5" />
             <text class="g__text" x="25" y="35">G</text>
         </g>
 
         <!-- H Key -->
-        <g id="h__group" class="keys" data-name="h__group" transform="translate(897 837)">
+        <g id="h__group" class="keys" data-name="72" transform="translate(897 837)">
             <rect id="h__key" width="60" height="60" rx="8.5" />
             <text class="h__text" x="25" y="35">H</text>
         </g>
 
         <!-- J Key -->
-        <g id="j__group" class="keys" data-name="j__group" transform="translate(961 837)">
+        <g id="j__group" class="keys" data-name="74" transform="translate(961 837)">
             <rect id="j__key" width="60" height="60" rx="8.5" />
             <text class="j__text" x="25" y="35">J</text>
         </g>
 
         <!-- K Key -->
-        <g id="k__group" class="keys" data-name="k__group" transform="translate(1024 837)">
+        <g id="k__group" class="keys" data-name="75" transform="translate(1024 837)">
             <rect id="k__key" width="60" height="60" rx="8.5" />
             <text class="k__text" x="25" y="35">K</text>
         </g>
 
         <!-- L Key -->
-        <g id="l__group" class="keys" data-name="l__group" transform="translate(1086 837)">
+        <g id="l__group" class="keys" data-name="76" transform="translate(1086 837)">
             <rect id="l__key" width="60" height="60" rx="8.5" />
             <text class="l__text" x="25" y="35">L</text>
         </g>
 
         <!-- Colon Key -->
-        <g id="colon__group" class="keys" data-name="colon__group" transform="translate(1147 837)">
+        <g id="colon__group" class="keys" data-name="186" transform="translate(1147 837)">
             <rect id="colon__key" width="60" height="60" rx="8.5" />
             <text class="colon__text" x="25" y="25">:</text>
             <text class="colon__text" x="25" y="45">;</text>
         </g>
 
         <!-- Quotation Key -->
-        <g id="quotation__group" class="keys" data-name="quotation__group" transform="translate(1211 837)">
+        <g id="quotation__group" class="keys" data-name="222" transform="translate(1211 837)">
             <rect id="quotation__key" width="60" height="60" rx="8.5" />
             <text class="quotation__text" x="25" y="25">"</text>
             <text class="quotation__text" x="27" y="45">'</text>
         </g>
 
         <!-- Enter Key -->
-        <g id="enter__group" class="keys" data-name="enter__group" transform="translate(1276 837)">
+        <g id="enter__group" class="keys" data-name="13" transform="translate(1276 837)">
             <rect class="enter__key" width="106" height="60" rx="9" />
             <text class="enter__text" x="60" y="45">enter</text>
         </g>
 
         <!-- BOTTOM ROW -->
 
+        <!-- Shift Key -->
+        <g id="shift__group" class="keys" data-name="16" transform="translate(473 899)">
+            <rect class="shift__key" width="141" height="60" rx="9" />
+            <text class="shift__text" x="10" y="45">shift</text>
+        </g>
+
         <!-- Z Key -->
-        <g id="z__group" class="keys" data-name="z__group" transform="translate(615 899)">
+        <g id="z__group" class="keys" data-name="90" transform="translate(615 899)">
             <rect id="z__key" width="60" height="60" rx="8.5" />
             <text class="z__text" x="25" y="35">Z</text>
         </g>
 
-
         <!-- X Key -->
-        <g id="x__group" class="keys" data-name="x__group" transform="translate(679 899)">
+        <g id="x__group" class="keys" data-name="88" transform="translate(679 899)">
             <rect id="x__key" width="60" height="60" rx="8.5" />
             <text class="x__text" x="25" y="35">X</text>
         </g>
 
         <!-- C Key -->
-        <g id="c__group" class="keys" data-name="c__group" transform="translate(740 899)">
+        <g id="c__group" class="keys" data-name="67" transform="translate(740 899)">
             <rect id="c__key" width="60" height="60" rx="8.5" />
             <text class="c__text" x="25" y="35">C</text>
         </g>
 
         <!-- V Key -->
-        <g id="v__group" class="keys" data-name="v__group" transform="translate(804 899)">
+        <g id="v__group" class="keys" data-name="86" transform="translate(804 899)">
             <rect id="v__key" width="60" height="60" rx="8.5" />
             <text class="v__text" x="25" y="35">V</text>
         </g>
 
         <!-- B Key -->
-        <g id="b__group" class="keys" data-name="KeyB" transform="translate(865 899)">
+        <g id="b__group" class="keys" data-name="66" transform="translate(865 899)">
             <rect id="b__key" width="60" height="60" rx="8.5" />
             <text class="b__text" x="25" y="35">B</text>
         </g>
 
         <!-- N Key -->
-        <g id="n__group" class="keys" data-name="n__group" transform="translate(930 899)">
-            <rect id="n__key" width="60" height="60" rx="8.5" />
-            <text class="n__text" x="25" y="35">N</text>
-        </g>
-
-        <!-- N Key -->
-        <g id="n__group" class="keys" data-name="n__group" transform="translate(930 899)">
+        <g id="n__group" class="keys" data-name="78" transform="translate(930 899)">
             <rect id="n__key" width="60" height="60" rx="8.5" />
             <text class="n__text" x="25" y="35">N</text>
         </g>
 
         <!-- M Key -->
-        <g id="m__group" class="keys" data-name="m__group" transform="translate(993 899)">
+        <g id="m__group" class="keys" data-name="77" transform="translate(993 899)">
             <rect id="m__key" width="60" height="60" rx="8.5" />
             <text class="m__text" x="25" y="35">M</text>
         </g>
 
         <!-- Comma Key -->
-        <g id="comma__group" class="keys" data-name="comma__group" transform="translate(1054 899)">
+        <g id="comma__group" class="keys" data-name="188" transform="translate(1054 899)">
             <rect id="comma__key" width="60" height="60" rx="8.5" />
             <text class="comma__text" x="25" y="25">&lt;</text>
             <text class="comma__text" x="25" y="45">,</text>
         </g>
 
         <!-- Period Key -->
-        <g id="period__group" class="keys" data-name="period__group" transform="translate(1117 899)">
+        <g id="period__group" class="keys" data-name="190" transform="translate(1117 899)">
             <rect id="period__key" width="60" height="60" rx="8.5" />
             <text class="period__text" x="25" y="25">></text>
             <text class="period__text" x="25" y="45">.</text>
         </g>
 
         <!-- Question_Mark Key -->
-        <g id="question_mark__group" class="keys" data-name="question_mark__group" transform="translate(1179 899)">
+        <g id="question_mark__group" class="keys" data-name="191" transform="translate(1179 899)">
             <rect id="question_mark__key" width="60" height="60" rx="8.5" />
             <text class="question_mark__text" x="25" y="25">?</text>
             <text class="question_mark__text" x="25" y="45">/</text>
         </g>
 
-
+        <!-- Shift2 Key -->
+        <g id="shift2__group" class="keys" data-name="16" transform="translate(1243 899)">
+            <rect class="shift2__key" width="141" height="60" rx="9" />
+            <text class="shift2__text" x="10" y="45">shift</text>
+        </g>
 
         <!-- SPACEBAR ROW -->
 
         <!-- Control Key -->
-        <g id="control__group" class="keys" data-name="control__group" transform="translate(473 961)">
+        <g id="control__group" class="keys" data-name="17" transform="translate(473 961)">
             <rect class="control__key" width="124" height="60" rx="9" />
             <text class="control__text" x="10" y="45">control</text>
         </g>
 
         <!-- Alt Key -->
-        <g id="alt__group" class="keys" data-name="alt__group" transform="translate(601 961)">
+        <g id="alt__group" class="keys" data-name="18" transform="translate(601 961)">
             <rect class="alt__key" width="97" height="60" rx="9" />
             <text class="alt1__text" x="10" y="45">alt</text>
         </g>
 
         <!-- Space Key -->
-        <g id="space__group" class="keys" data-name="space__group" transform="translate(703 961)">
+        <g id="space__group" class="keys" data-name="32" transform="translate(703 961)">
             <rect class="space__key" width="389" height="60" rx="9" />
             <text class="space__text" x="10" y="45">space</text>
         </g>
@@ -394,20 +397,8 @@
         </g>
 
         <!-- Empty Key -->
-        <g id="empty__group" class="keys" data-name="empty__group" transform="translate(1197 961)">
+        <g id="empty__group" class="keys" data-name="null" transform="translate(1197 961)">
             <rect class="empty__key" width="186" height="60" rx="9" />
-        </g>
-
-        <!-- Shift Key -->
-        <g id="shift__group" class="keys" data-name="shift__group" transform="translate(473 899)">
-            <rect class="shift__key" width="141" height="60" rx="9" />
-            <text class="shift__text" x="10" y="45">shift</text>
-        </g>
-
-        <!-- Shift2 Key -->
-        <g id="shift2__group" class="keys" data-name="shift2__group" transform="translate(1243 899)">
-            <rect class="shift2__key" width="141" height="60" rx="9" />
-            <text class="shift2__text" x="10" y="45">shift</text>
         </g>
 
         </>

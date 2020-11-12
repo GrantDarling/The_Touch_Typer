@@ -1,32 +1,21 @@
+const keys = document.querySelectorAll('.keys')
 
-const key = document.querySelector('#b__group');
-document.addEventListener('keydown', logKey);
-document.addEventListener('keyup', logKey2);
-
-
-function logKey(e) {
-  if (e.code == key.dataset.name) {
-    
-    key.style.fill = "purple";
-}
- 
-}
+keys.forEach(key => console.log(key.dataset.name))
 
 
-function logKey2(e) {
-  if (e.code == key.dataset.name) {
-    
-    key.style.fill = " #1d1d1d";
-}
-  log.textContent += ` ${e.code} + ${key.dataset.name}`; 
-}
+// const keyDown = (e) => {
+//     if (e.code == key.dataset.name) key.style.fill = "purple";
+// }
+
+// const keyUp = (e) => {
+//     if (e.code == key.dataset.name) key.style.fill = "#1d1d1d";
+// }
 
 
-/* Cycle through keys */
-/*
-var divs = document.querySelectorAll('.keys'), i;
+// document.addEventListener('keydown', keyDown);
+// document.addEventListener('keyup', keyUp);
 
-for (i = 0; i < divs.length; ++i) {
-  console.log(divs[i].dataset.name)
-}
-*/
+// for (i = 0; i < keys.length; ++i) {
+//     keyDown()
+//     keyUp()
+//   }
