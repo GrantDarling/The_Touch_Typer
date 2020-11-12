@@ -20,3 +20,13 @@ function logKey2(e) {
 }
   log.textContent += ` ${e.code} + ${key.dataset.name}`; 
 }
+
+
+/* Cycle through keys */
+/*
+var divs = document.querySelectorAll('.keys'), i;
+
+for (i = 0; i < divs.length; ++i) {
+  console.log(divs[i].dataset.name)
+}
+*/
