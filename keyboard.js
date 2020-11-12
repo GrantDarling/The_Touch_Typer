@@ -1,21 +1,15 @@
 const keys = document.querySelectorAll('.keys')
 
-keys.forEach(key => console.log(key.dataset.name))
+const findKey = (e, fillColor) => {
+    keys.forEach(key => {
+        if (e.which == key.dataset.name) {
+            key.style.fill = fillColor; 
+        }
+  });
+}
+const keyDown = (e) => findKey(e, "red");
+const keyUp = (e) => findKey(e, "#1d1d1d");
 
-
-// const keyDown = (e) => {
-//     if (e.code == key.dataset.name) key.style.fill = "purple";
-// }
-
-// const keyUp = (e) => {
-//     if (e.code == key.dataset.name) key.style.fill = "#1d1d1d";
-// }
-
-
-// document.addEventListener('keydown', keyDown);
-// document.addEventListener('keyup', keyUp);
-
-// for (i = 0; i < keys.length; ++i) {
-//     keyDown()
-//     keyUp()
-//   }
+document.addEventListener('keydown', keyDown);
+document.addEventListener('keyup', keyUp);
+  
