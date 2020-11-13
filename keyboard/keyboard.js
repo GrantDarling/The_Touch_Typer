@@ -6,7 +6,8 @@ const findKey = (e, fillColor) => {
             key.style.fill = fillColor; 
         }
   });
-}
+  }
+
 
 const keyDown = (e) => findKey(e, "red");
 const keyUp = (e) => findKey(e, "#1d1d1d");
