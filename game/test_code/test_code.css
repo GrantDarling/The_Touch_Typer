@@ -1,0 +1,15 @@
+#screen {
+  border: solid 1px black;
+  height: 250px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.word {
+  display: inline-block;
+  padding: 0 15px;
+  margin: 5px;
+  font-size: 45px;
+  background: #1c1c1c;
+  color: white;
+}
