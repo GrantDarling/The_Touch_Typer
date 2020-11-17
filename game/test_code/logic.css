@@ -2,7 +2,7 @@
   border: solid 1px black;
   height: 250px;
   width: 500px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .word {
