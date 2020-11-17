@@ -4,11 +4,17 @@ const display = [
 
 const drawDisplay = () => {
   let letterIndex = 0;
-  const words = display[0].split(' ');
+  const words = display[0]
+    .split(' ')
+    .reduce((acc, currentValue) => acc.concat(currentValue, ' '), [' ']);
 
   words.forEach((word, wordIndex) => {
     let wordContainer = document.createElement('div');
-    wordContainer.classList.add('word');
+
+    word !== ' '
+      ? wordContainer.classList.add('word')
+      : wordContainer.classList.add('space');
+
     wordContainer.setAttribute('id', `word-${wordIndex}`);
     document.getElementById('display').appendChild(wordContainer);
 
@@ -21,6 +27,7 @@ const drawDisplay = () => {
       letterWrapper.innerHTML = letter;
       document.getElementById(`word-${wordIndex}`).appendChild(letterWrapper);
     });
+    //}
   });
 };
 
@@ -46,9 +53,9 @@ function logKey(e) {
   // 2. Give medals for each timeframe
   // 3. Do it based off of how many letters there are
   // TEST CODE
-  //cursorPosition++;
-  //console.log(cursorPosition);
-  //document.getElementById(`letter-${cursorPosition}`).classList.add('mystyle');
+  cursorPosition++;
+  console.log(cursorPosition);
+  document.getElementById(`letter-${cursorPosition}`).classList.add('mystyle');
 }
 
 drawDisplay();

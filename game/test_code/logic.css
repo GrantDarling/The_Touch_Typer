@@ -1,4 +1,4 @@
-#screen {
+#display {
   border: solid 1px black;
   height: 250px;
   width: 500px;
@@ -12,4 +12,12 @@
   font-size: 45px;
   background: #1c1c1c;
   color: white;
+}
+
+.space {
+  display: inline-block;
+}
+
+.mystyle {
+  color: red;
 }
