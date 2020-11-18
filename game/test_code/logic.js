@@ -58,4 +58,6 @@ function logKey(e) {
   document.getElementById(`letter-${cursorPosition}`).classList.add('mystyle');
 }
 
+//
+
 drawDisplay();
