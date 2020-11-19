@@ -1,8 +1,8 @@
 #display {
   border: solid 1px black;
-  height: 250px;
+  height: 275px;
   width: 500px;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .word {
@@ -21,3 +21,24 @@
 .mystyle {
   color: red;
 }
+
+.key-mistake {
+  color: red;
+}
+
+.key-correct {
+  color: green;
+}
+
+.key-active {
+  color: cyan;
+}
+
+.space:before {
+}
+
+.space-active {
+  color: red;
+}
+
+.

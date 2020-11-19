@@ -6,14 +6,17 @@ const drawDisplay = () => {
   let letterIndex = 0;
   const words = display[0]
     .split(' ')
-    .reduce((acc, currentValue) => acc.concat(currentValue, ' '), [' ']);
+    .reduce((acc, currentValue) => acc.concat(currentValue, ' '), []);
 
   words.forEach((word, wordIndex) => {
     let wordContainer = document.createElement('div');
 
-    word !== ' '
-      ? wordContainer.classList.add('word')
-      : wordContainer.classList.add('space');
+    if (word !== ' ') {
+      wordContainer.classList.add('word');
+    } else {
+      wordContainer.classList.add('space');
+      wordContainer.innerHTML = '_';
+    }
 
     wordContainer.setAttribute('id', `word-${wordIndex}`);
     document.getElementById('display').appendChild(wordContainer);
@@ -27,37 +30,52 @@ const drawDisplay = () => {
       letterWrapper.innerHTML = letter;
       document.getElementById(`word-${wordIndex}`).appendChild(letterWrapper);
     });
-    //}
   });
 };
 
-let cursorPosition = 0;
-
-document.addEventListener('keydown', logKey);
-function logKey(e) {
-  // DESIGN
-  // 1. Startcurson bottom-border at cursorPosition 1
-  // 2. if key pressed matches target key, make underline green,
-  // 3. else, make it red.
-  // 4. Once reaches end of word, check if any mistakes
-  // 5. If there is, do something negative to the word (css)
-  // 6. else, do something positive (css)
-  // FUNCTIONALITY
-  // A: ACCURACY TRACKER
-  // 1. If backspace pressed, return to the last iteration
-  // 2. If error made, mark error
-  // 3. If keys match, mark as correct
-  // 4. Do calculation for accuracy percentage
-  // B: TIMER
-  // 1. Figure out how I am going to track best times
-  // 2. Give medals for each timeframe
-  // 3. Do it based off of how many letters there are
-  // TEST CODE
-  cursorPosition++;
-  console.log(cursorPosition);
-  document.getElementById(`letter-${cursorPosition}`).classList.add('mystyle');
-}
-
-//
-
 drawDisplay();
+
+let typeChecker = () => {
+  const correct = 'correct';
+  const mistake = 'mistake';
+  const active = 'active';
+  let currentPosition = 1;
+  let lastPosition = currentPosition - 1;
+  let wordPosition = 1;
+  let lastWordPosition = wordPosition - 1;
+  let currentLetter = document.getElementById(`letter-${currentPosition}`); // !!! how to make this not display twice?
+  let currentWord = document.getElementById(`word-${wordPosition}`);
+  let lastLetter = document.getElementById(`letter-${lastPosition}`); // !!!
+  let lastWord = document.getElementById(`word-${lastWordPosition}`);
+
+  currentLetter.classList.add(`key-${active}`);
+
+  document.addEventListener('keydown', advanceCursor);
+
+  function advanceCursor(e) {
+    currentPosition++;
+    lastPosition++;
+
+    let currentLetter = document.getElementById(`letter-${currentPosition}`);
+    let lastLetter = document.getElementById(`letter-${lastPosition}`);
+    let currentWord = document.getElementById(`word-${wordPosition}`);
+    let lastWord = document.getElementById(`word-${lastWordPosition}`);
+
+    // Check if space, light up if so
+    if (currentLetter.innerHTML.trim() == '') {
+      wordPosition = wordPosition + 2;
+      lastWordPosition = wordPosition - 2;
+      currentWord.classList.add(`space-${active}`);
+    }
+
+    // Light up current key
+    currentLetter.classList.add(`key-${active}`);
+    lastLetter.classList.remove(`key-${active}`);
+    lastWord.classList.remove(`space-${active}`);
+
+    // Check if correct or mistake
+    alert(e.charcode);
+  }
+};
+
+typeChecker();
