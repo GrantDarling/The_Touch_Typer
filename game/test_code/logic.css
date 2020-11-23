@@ -1,8 +1,22 @@
 #display {
+  position: relative;
   border: solid 1px black;
   height: 275px;
   width: 500px;
   overflow: hidden;
+}
+
+#start-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1c1c1cf0;
 }
 
 .word {
@@ -16,7 +30,27 @@
 
 .space {
   display: inline-block;
+  width: 5px;
+  height: 29px;
+  font-size: 45px;
 }
+
+.cursor {
+  color: cadetblue;
+  animation: cursor-blink 10s infinite alternate;
+}
+
+@keyframes cursor-blink {
+  0% {
+    background: green;
+  }
+
+  100% {
+    background: none;
+  }
+}
+
+/*
 
 .mystyle {
   color: red;
@@ -31,14 +65,14 @@
 }
 
 .key-active {
-  color: cyan;
+  color: cyan !important;
 }
 
-.space:before {
-}
 
 .space-active {
   color: red;
 }
 
-.
+.word-active {
+  border-bottom: red solid 8px;
+} */
