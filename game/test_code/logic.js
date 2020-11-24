@@ -37,108 +37,105 @@ const drawDisplay = () => {
   });
 };
 
-// 2. Style previous key based off of key input <-- only wrong key
-// 3.
-// 4. Key accuracy
-// 5. Key wpm
-// 6. Figure out general for medals
-//     if finished, at wpm then bronze, if above x words per minute silver, if above x words per minute over 90% accuracy then gold
-
-drawDisplay();
-
 (function () {
-  let advancer = -1;
+  let advancer = 0;
   let startScreen = document.querySelector('#start-screen');
+  let started = false;
+  let ended = false;
+  let initialized = false;
+  let totalAttempts = -1;
+  let totalSuccesses = 0;
+  let milliseconds = 0;
+
+  // Increase Attempts & Successes
+  let increaseAttempts = () => totalAttempts++;
+  let increaseSuccesses = () => totalSuccesses++;
+
+  // Calculate Accuracy
+  let calculateAccuracy = () => {
+    let accuracy = Math.floor((totalSuccesses / totalAttempts) * 100);
+    return accuracy;
+  };
+
+  // Display Accuracy
+  let accuracyDisplayer = () => {
+    const accuracyDisplay = document.querySelector('#accuracy');
+    let accuracy = calculateAccuracy();
+    isNaN(accuracy)
+      ? (accuracyDisplay.innerHTML = 'Accuracy: 100%')
+      : (accuracyDisplay.innerHTML = accuracy + '%');
+  };
+
+  // Convert milliseconds to minutes
+  let millisecondsToMinutes = (milliseconds) => {
+    let minutes = (milliseconds / 60000).toFixed(2);
+    console.log(minutes);
+  };
+
+  // Start Timer
+  let startTimer = (timeout) =>
+    setInterval(() => {
+      milliseconds = milliseconds + timeout;
+      millisecondsToMinutes(milliseconds);
+    }, timeout);
 
   // Begin game
   let startGame = (e) => {
-    if (e.key === 'Backspace') startScreen.style.display = 'none';
+    if (e.key === ' ' && initialized === false) {
+      initialized = true;
+      started = true;
+      startScreen.style.display = 'none';
+      startTimer(5000);
+    }
     drawCursor();
   };
+
+  // End game
+  let endGame = () => {};
 
   // Draw Cursor
   let drawCursor = () => {
     let lastCursor = document.getElementsByClassName('letter')[advancer - 1];
     let cursor = document.getElementsByClassName('letter')[advancer];
 
-    if (advancer >= 1) lastCursor.classList.remove('cursor');
+    if (advancer >= 1 && started) lastCursor.classList.remove('cursor');
     cursor.classList.add('cursor');
   };
 
   // Advance cursor
   let advanceCursor = () => {
-    advancer++;
-    drawCursor();
+    if (started) {
+      advancer++;
+      drawCursor();
+
+      return advancer;
+    }
   };
 
-  // Event listeners
-  document.addEventListener('keydown', advanceCursor);
-  document.addEventListener('keydown', startGame);
+  // Check if correct
+  let checkKey = (e) => {
+    let currentKey = document.getElementsByClassName('letter')[advancer];
+
+    if (currentKey.innerHTML === e.key) {
+      currentKey.classList.add('key--success');
+      increaseSuccesses();
+      advanceCursor();
+    } else if (advancer >= 1) {
+      currentKey.classList.add('key--fail');
+    }
+  };
+
+  // Play Game
+  let playGame = (e) => {
+    startGame(e);
+
+    if (started) {
+      increaseAttempts();
+      checkKey(e);
+      accuracyDisplayer();
+    }
+  };
+
+  drawDisplay();
+  document.addEventListener('keydown', playGame);
 })();
-
-// TODO:
-// 1. Make spacebar visible for cursor
-// 2. check if keypress is successful or not
-//    3. If it is NOT, wait until it is successful and leave red mark
-// 4. Update the draw because we do not need to number them now
-
-// let typeChecker = () => {
-//   const correct = 'correct';
-//   const mistake = 'mistake';
-//   const active = 'active';
-
-//   let currentPosition = 1;
-//   let lastPosition = currentPosition - 1;
-//   let nextPosition = currentPosition + 1;
-
-//   let wordPosition = 1;
-//   let lastWordPosition = wordPosition - 1;
-
-//   let currentLetter = document.getElementById(`letter-${currentPosition}`); // !!! how to make this not display twice?
-//   let currentWord = document.getElementById(`word-${wordPosition}`);
-//   let lastLetter = document.getElementById(`letter-${lastPosition}`); // !!!
-//   let lastWord = document.getElementById(`word-${lastWordPosition}`);
-
-//   currentLetter.classList.add(`key-${active}`);
-
-//   document.addEventListener('keydown', advanceCursor);
-
-//   function advanceCursor(e) {
-//     currentPosition++;
-//     lastPosition++;
-//     nextPosition++;
-
-//     let currentLetter = document.getElementById(`letter-${currentPosition}`);
-//     let lastLetter = document.getElementById(`letter-${lastPosition}`);
-//     let nextLetter = document.getElementById(`letter-${nextPosition}`);
-//     let currentWord = document.getElementById(`word-${wordPosition}`);
-//     let lastWord = document.getElementById(`word-${lastWordPosition}`);
-
-//     // Check if backspace
-
-//     // if (e.key === 'Backspace') {
-//     //   currentLetter.classList.remove(`key-${active}`);
-//     //   lastLetter.classList.add(`key-${active}`);
-
-//     //   currentPosition = currentPosition - 2;
-//     //   lastPosition = lastPosition - 2;
-//     // }
-
-//     // Check if correct or mistake
-//     lastLetter.innerHTML === e.key
-//       ? lastLetter.classList.add(`key-${correct}`)
-//       : lastLetter.classList.add(`key-${mistake}`);
-
-//     // Check if space, light up if so
-//     if (currentLetter.innerHTML.trim() == '') {
-//       wordPosition = wordPosition + 2;
-//       lastWordPosition = wordPosition - 2;
-//       currentWord.classList.add(`space-${active}`);
-//     }
-
-//     // Light up current key
-//     currentLetter.classList.add(`key-${active}`);
-//     lastLetter.classList.remove(`key-${active}`);
-//     lastWord.classList.remove(`space-${active}`);
-//   }
-// };
