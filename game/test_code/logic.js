@@ -79,6 +79,28 @@ const drawDisplay = () => {
       millisecondsToMinutes(milliseconds);
     }, timeout);
 
+  // Check current word !!!
+  let getCurrentWordIndex = () => {
+    // var li = document.getElementById('myId');
+    // alert(li.className);
+  };
+
+  // calculate words per minute !!!
+  let calculateWPM = () => {
+    // take current (word - 1) and divide by total minutes
+    // getCurrentWordIndex - millisecondsToMinutes
+  };
+
+  // display current WPM !!!
+  let displayWPM = () => {
+    // make inner html the calculated WPM
+  };
+
+  // Figure out when the game finishes
+  let gameOver = () => {
+    // if game is over then gameOver = true;
+  };
+
   // Begin game
   let startGame = (e) => {
     if (e.key === ' ' && initialized === false) {
