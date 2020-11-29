@@ -28,7 +28,8 @@
   color: white;
 }
 
-.space {
+.space,
+.word-space {
   display: inline-block;
   width: 5px;
   height: 29px;
@@ -58,6 +59,10 @@
 .key--fail {
   color: red;
   background: crimson !important;
+}
+
+.word--active {
+  border-bottom: 3px solid cyan; /* box-shadow ? */
 }
 
 /*
