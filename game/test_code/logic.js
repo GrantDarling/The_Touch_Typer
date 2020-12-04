@@ -2,39 +2,46 @@ const display = [
   'ffj jff j f jfj fj j ff jjj fjfj jjj f ffj jffj jff fj jf jfff jfjf jfj fj j f f jjf',
 ];
 
-const drawDisplay = () => {
-  let letterIndex = 0;
-  const words = display[0]
+// Helpers
+const splitToWords = (array) => {
+  const words = array[0]
     .split(' ')
     .reduce((acc, currentValue) => acc.concat(currentValue, ' '), []);
 
-  words.forEach((word, wordIndex) => {
-    let wordContainer = document.createElement('div');
+  return words;
+};
 
-    if (word !== ' ') {
-      wordContainer.classList.add('word');
-    } else {
-      wordContainer.classList.add('word-space');
-      wordContainer.innerHTML = '';
-    }
+const drawWords = () => {
+  words.forEach((word, index) => {
+    let wordWrapper = document.createElement('div');
+    wordWrapper.setAttribute('id', `word-${index}`);
 
-    wordContainer.setAttribute('id', `word-${wordIndex}`);
-    document.getElementById('display').appendChild(wordContainer);
+    word === ' '
+      ? wordWrapper.classList.add('space')
+      : wordWrapper.classList.add('word');
 
-    word.split('').forEach((letter) => {
-      letterIndex++;
+    document.getElementById('display').appendChild(wordWrapper);
 
-      let letterWrapper = document.createElement('span');
-      letterWrapper.classList.add('letter');
-      letterWrapper.setAttribute('id', `letter-${letterIndex}`);
-      letterWrapper.innerHTML = letter;
-      document.getElementById(`word-${wordIndex}`).appendChild(letterWrapper);
-
-      if (letter === ' ') {
-        letterWrapper.classList.add('space');
-      }
-    });
+    // Draw the inner letters of the word
+    drawLetters(word, index);
   });
+};
+
+const drawLetters = (word, index) => {
+  word.split('').forEach((letter) => {
+    let letterWrapper = document.createElement('span');
+
+    letterWrapper.classList.add('letter');
+    letterWrapper.innerHTML = letter;
+    if (letter === ' ') letterWrapper.classList.add('space');
+
+    document.getElementById(`word-${index}`).appendChild(letterWrapper);
+  });
+};
+
+const drawDisplay = () => {
+  words = splitToWords(display);
+  drawWords(words);
 };
 
 (function () {
