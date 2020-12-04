@@ -21,13 +21,16 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <Link to='/'>App</Link>
+        <Link to='/'>The Touch Typer</Link>
       </li>
       <li>
         <Link to='/register'>Register</Link>
       </li>
       <li>
         <Link to='/login'>Login</Link>
+      </li>
+      <li>
+        <Link to='/test'>Testing Grounds</Link>
       </li>
     </ul>
   );
