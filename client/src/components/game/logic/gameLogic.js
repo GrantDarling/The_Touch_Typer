@@ -1,46 +1,3 @@
-const display = [
-  'ffj jff j f jfj fj j ff jjj fjfj jjj f ffj jffj jff fj jf jfff jfjf jfj fj j f f jjf',
-];
-
-// Helpers
-const splitToWords = (array) => {
-  const words = array[0]
-    .split(' ')
-    .reduce((acc, currentValue) => acc.concat(currentValue, ' '), []);
-
-  return words;
-};
-const drawWords = () => {
-  words.forEach((word, index) => {
-    let wordWrapper = document.createElement('div');
-    wordWrapper.setAttribute('id', `word-${index}`);
-
-    word === ' '
-      ? wordWrapper.classList.add('space')
-      : wordWrapper.classList.add('word');
-
-    document.getElementById('display').appendChild(wordWrapper);
-
-    // Draw the inner letters of the word
-    drawLetters(word, index);
-  });
-};
-const drawLetters = (word, index) => {
-  word.split('').forEach((letter) => {
-    let letterWrapper = document.createElement('span');
-
-    letterWrapper.classList.add('letter');
-    letterWrapper.innerHTML = letter;
-    if (letter === ' ') letterWrapper.classList.add('space');
-
-    document.getElementById(`word-${index}`).appendChild(letterWrapper);
-  });
-};
-const drawDisplay = () => {
-  words = splitToWords(display);
-  drawWords(words);
-};
-
 // Globals
 let game = {
   started: false,
@@ -205,12 +162,14 @@ let playGame = (e) => {
   }
 };
 
-document.addEventListener('keydown', playGame);
-
 /**
  * TODO:
  * 1. Create an end game function
  * 2. Fix WPM to be more accurate
  */
 
-drawDisplay();
+// const playGame = (e) => {
+//   console.log(e.key);
+// };
+
+module.exports = playGame;

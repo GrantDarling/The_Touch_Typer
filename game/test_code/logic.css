@@ -64,30 +64,3 @@
 .word--active {
   border-bottom: 3px solid cyan; /* box-shadow ? */
 }
-
-/*
-
-.mystyle {
-  color: red;
-}
-
-.key-mistake {
-  color: red;
-}
-
-.key-correct {
-  color: green;
-}
-
-.key-active {
-  color: cyan !important;
-}
-
-
-.space-active {
-  color: red;
-}
-
-.word-active {
-  border-bottom: red solid 8px;
-} */

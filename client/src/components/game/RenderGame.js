@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import drawDisplay from './logic/drawDisplay';
+import playGame from './logic/gameLogic';
 
 const RenderGame = () => {
   useEffect(() => {
     const display = [
       'ffj jff j f jfj fj j ff jjj fjfj jjj f ffj jffj jff fj jf jfff jfjf jfj fj j f f jjf',
     ];
-
     drawDisplay(display);
-  });
+    document.addEventListener('keydown', playGame);
+  }, []);
 
   return (
     <div id='game'>
