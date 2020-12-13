@@ -12,6 +12,7 @@ import RenderGame from './components/game/RenderGame';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { loadUser } from './redux/actions/auth';
+import { loadLevels } from './redux/actions/levels';
 import setAuthToken from './utils/setAuthToken';
 
 if (localStorage.token) {
@@ -21,6 +22,7 @@ if (localStorage.token) {
 const App = () => {
   useEffect(() => {
     store.dispatch(loadUser());
+    store.dispatch(loadLevels());
   }, []);
 
   return (
