@@ -35,6 +35,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to='/test'>Testing Grounds</Link>
       </li>
+      <li>
+        <Link to='/levels'>Levels</Link>
+      </li>
     </ul>
   );
 

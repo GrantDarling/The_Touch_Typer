@@ -7,12 +7,13 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import RenderGame from './components/game/RenderGame';
+import Levels from './components/game/Levels';
 
 // Redux
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { loadUser } from './redux/actions/auth';
-import { loadLevels } from './redux/actions/levels';
+import { levels } from './redux/actions/levels';
 import setAuthToken from './utils/setAuthToken';
 
 if (localStorage.token) {
@@ -22,7 +23,7 @@ if (localStorage.token) {
 const App = () => {
   useEffect(() => {
     store.dispatch(loadUser());
-    store.dispatch(loadLevels());
+    store.dispatch(levels());
   }, []);
 
   return (
@@ -37,6 +38,7 @@ const App = () => {
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
               <Route exact path='/test' component={RenderGame} />
+              <Route exact path='/levels' component={Levels} />
             </Switch>
           </section>
         </Fragment>

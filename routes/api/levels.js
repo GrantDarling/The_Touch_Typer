@@ -25,42 +25,48 @@ router.post('/', async (req, res) => {
     // 1. Check if levels exist
     // 2. Send this to frontend
 
-    const levels = new Level({
-      level1: {
-        title: 'F & J',
-        easy: {
-          text: ['this is easy level1'],
-          unlocked: true,
-        },
-        intermediate: {
-          text: ['this is intermediate level1'],
-          unlocked: true,
-        },
-        advanced: {
-          text: ['this is advanced level1'],
-          unlocked: true,
-        },
+    const level1 = new Level({
+      difficulty: '1',
+      title: 'F & J',
+      easy: {
+        text: ['this is easy level1'],
         unlocked: true,
       },
-      level2: {
-        title: 'Home Row Keys',
-        easy: {
-          text: ['this is easy level2'],
-          unlocked: true,
-        },
-        intermediate: {
-          text: ['this is intermediate level2'],
-          unlocked: true,
-        },
-        advanced: {
-          text: ['this is advanced level2'],
-          unlocked: true,
-        },
+      intermediate: {
+        text: ['this is intermediate level1'],
         unlocked: true,
       },
+      advanced: {
+        text: ['this is advanced level1'],
+        unlocked: true,
+      },
+      unlocked: true,
     });
 
-    await levels.save();
+    const level2 = new Level({
+      difficulty: '2',
+      title: 'Home Row',
+      easy: {
+        text: ['this is easy level2'],
+        unlocked: true,
+      },
+      intermediate: {
+        text: ['this is intermediate level2'],
+        unlocked: true,
+      },
+      advanced: {
+        text: ['this is advanced level2'],
+        unlocked: true,
+      },
+      unlocked: true,
+    });
+
+    await level1.save();
+    await level2.save();
+
+    let levels = [];
+    levels.push(level1);
+    levels.push(level2);
 
     res.send(levels);
   } catch (error) {
