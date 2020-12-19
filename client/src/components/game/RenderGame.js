@@ -1,14 +1,15 @@
-import React, { useEffect, useReducer, isAuthenticated } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import drawDisplay from './logic/drawDisplay';
 import playGame from './logic/gameLogic';
 
-const RenderGame = ({ name }) => {
+const RenderGame = ({ name, achievements }) => {
   useEffect(() => {
     const display = [
       'ffj jff j f jfj fj j ff jjj fjfj jjj f ffj jffj jff fj jf jfff jfjf jfj fj j f f jjf',
     ];
     drawDisplay(display);
+
     document.addEventListener('keydown', playGame);
 
     return function cleanup() {
@@ -18,7 +19,9 @@ const RenderGame = ({ name }) => {
 
   return (
     <div id='game'>
-      <h1>Display: {name}</h1>
+      <h1>
+        Display: {name} : {achievements ? 'true' : 'false'}
+      </h1>
       <div id='accuracy'>Accuracy: 100%</div>
       <div id='wpm'>WPM: 0</div>
       <div id='display'>
@@ -30,6 +33,9 @@ const RenderGame = ({ name }) => {
 
 const mapStateToProps = (state) => ({
   name: state.auth.user ? state.auth.user.name : '',
+  achievements: state.auth.user
+    ? state.auth.user.achievements[0].sublevels.easy.bronze
+    : '',
 });
 
 export default connect(mapStateToProps)(RenderGame);
