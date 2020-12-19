@@ -1,4 +1,5 @@
 const express = require('express');
+const Achievements = require('../../models/Achievements');
 const router = express.Router();
 
 const Level = require('../../models/Levels');
@@ -41,6 +42,7 @@ router.post('/', async (req, res) => {
         unlocked: true,
       },
       unlocked: true,
+      achievements: ObjectId('CFEADD'),
     });
 
     const level2 = new Level({
@@ -59,6 +61,7 @@ router.post('/', async (req, res) => {
         unlocked: true,
       },
       unlocked: true,
+      achievements: ObjectId('ADEFCD'),
     });
 
     await level1.save();

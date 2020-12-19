@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Achievements = './Achievements';
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -21,6 +22,7 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  achievements: [Achievements],
 });
 
 module.exports = User = mongoose.model('user', userSchema);

@@ -6,7 +6,8 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 const { check, validationResult } = require('express-validator');
 
-const User = require("../../models/User");
+const User = require('../../models/User');
+const Achievements = require('../../models/Achievements');
 
 // @route      Post api/users
 // @desc       Register user
@@ -33,7 +34,9 @@ router.post(
       let user = await User.findOne({ email });
 
       if (user) {
-        return res.status(400).json({ errors: [{ msg: 'User already exists' }] });
+        return res
+          .status(400)
+          .json({ errors: [{ msg: 'User already exists' }] });
       }
 
       const avatar = gravatar.url(email, {
@@ -42,11 +45,41 @@ router.post(
         d: 'retro',
       });
 
+      let achievements = [];
+
+      for (let i = 0; i < 13; i++) {
+        position = 1 + i;
+        let achievement = new Achievements({
+          level: `level ${position}`,
+          sublevels: {
+            easy: {
+              bronze: false,
+              silver: false,
+              gold: false,
+            },
+            intermediate: {
+              bronze: false,
+              silver: false,
+              gold: false,
+            },
+            advanced: {
+              bronze: false,
+              silver: false,
+              gold: false,
+            },
+          },
+        });
+
+        await achievement.save();
+        achievements.push(achievement);
+      }
+
       user = new User({
         name,
         email,
         avatar,
-        password
+        password,
+        achievements,
       });
 
       const salt = await bcrypt.genSalt(10);
@@ -57,17 +90,17 @@ router.post(
 
       const payload = {
         user: {
-          id: user.id
-        }
-      }
+          id: user.id,
+        },
+      };
 
       jwt.sign(
-        payload, 
+        payload,
         config.get('jwtSecret'),
         { expiresIn: 360000 }, // !!! make this 3600
         (error, token) => {
-          if(error) throw error;
-          res.json({ token })
+          if (error) throw error;
+          res.json({ token });
         }
       );
     } catch (error) {

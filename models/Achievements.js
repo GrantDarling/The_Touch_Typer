@@ -1,32 +1,51 @@
 const mongoose = require('mongoose');
 
-const sublevelSchema = new mongoose.Schema({
+const medalSchema = new mongoose.Schema({
   bronze: {
     type: Boolean,
+    default: false,
     required: true,
   },
   silver: {
     type: Boolean,
+    default: false,
     required: true,
   },
   gold: {
     type: Boolean,
+    default: false,
     required: true,
   },
 });
 
 const sublevelSchema = new mongoose.Schema({
-  easy: [medalSchema],
-  intermediate: [medalSchema],
-  advanced: [medalSchema],
+  easy: {
+    type: medalSchema,
+    required: true,
+  },
+  intermediate: {
+    type: medalSchema,
+    required: true,
+  },
+  advanced: {
+    type: medalSchema,
+    required: true,
+  },
 });
 
 const achievementSchema = new mongoose.Schema({
-  name: {
+  level: {
     type: String,
     required: true,
   },
-  medals: [sublevelSchema],
+
+  sublevels: {
+    type: sublevelSchema,
+    required: true,
+  },
 });
 
-module.exports = User = mongoose.model('achievements', achievementSchema);
+module.exports = Achievements = mongoose.model(
+  'achievement',
+  achievementSchema
+);
