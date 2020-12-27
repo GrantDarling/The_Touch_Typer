@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SunIcon from '../../../styles/Images/sun_icon.svg';
 import MoonIcon from '../../../styles/Images/moon_icon.svg';
-import DesignSwitchLogic from './logic/DesignSwitchLogic';
+import toggleTheme from './logic/toggleTheme';
+import checkTheme from './logic/checkTheme';
 
 const DesignSwitch = () => {
+  useEffect(() => {
+    checkTheme();
+  }, []);
+
   return (
     <div className='design_switch'>
-      <img className='design_switch__icon' src={SunIcon} alt='Sun Icon' />
       <img className='design_switch__icon' src={MoonIcon} alt='Moon Icon' />
-      <button
-        className='design_switch__button'
-        onClick={DesignSwitchLogic}
-      ></button>
+      <img className='design_switch__icon' src={SunIcon} alt='Sun Icon' />
+      <button className='design_switch__button' onClick={toggleTheme}></button>
     </div>
   );
 };

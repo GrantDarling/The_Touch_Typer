@@ -6,10 +6,6 @@ import { logout } from '../../../redux/actions/auth';
 import DesignSwitch from './DesignSwitch';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
-  useEffect(() => {
-    DesignSwitch();
-  }, []);
-
   const authLinks = (
     <ul>
       <li>
