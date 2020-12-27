@@ -1,0 +1,27 @@
+.design_switch {
+  position: relative;
+  display: flex;
+  width: 90px;
+  background: pink;
+  justify-content: space-between;
+}
+
+.design_switch__icon {
+  display: flex;
+  height: 20px;
+  width: 20px;
+}
+
+.design_switch__button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+
+  &--light {
+    right: 0;
+  }
+  &--dark {
+    left: 0;
+  }
+}

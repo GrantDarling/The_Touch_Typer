@@ -1,1 +1,10 @@
 @import 'styles/test';
+
+// Vendors
+@import 'styles/Vendors/bourbon/bourbon';
+
+// Abstract
+@import 'styles/Abstract/fonts';
+
+// Components
+@import 'styles/Components/design-switch';

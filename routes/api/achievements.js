@@ -1,5 +1,9 @@
 const Achievements = require('../../models/Achievements');
 
+// @route      Get api/users
+// @desc       Creates new achievement schema for users
+// @access     Private
+
 function newAchievementsSchema() {
   let achievements = [];
 

@@ -31,6 +31,7 @@ const levelSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  // url
 });
 
 module.exports = Levels = mongoose.model('levels', levelSchema);

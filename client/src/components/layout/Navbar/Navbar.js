@@ -1,15 +1,17 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logout } from '../../redux/actions/auth';
+import { logout } from '../../../redux/actions/auth';
+import DesignSwitch from './DesignSwitch';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+  useEffect(() => {
+    DesignSwitch();
+  }, []);
+
   const authLinks = (
     <ul>
-      <li>
-        <Link to='/'>App</Link>
-      </li>
       <li>
         <Link to='/test'>Testing Grounds</Link>
       </li>
@@ -24,19 +26,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <Link to='/'>The Touch Typer</Link>
-      </li>
-      <li>
-        <Link to='/register'>Register</Link>
+        <DesignSwitch />
       </li>
       <li>
         <Link to='/login'>Login</Link>
-      </li>
-      <li>
-        <Link to='/test'>Testing Grounds</Link>
-      </li>
-      <li>
-        <Link to='/levels'>Levels</Link>
       </li>
     </ul>
   );
@@ -44,7 +37,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   return (
     <nav>
       <h1>
-        <Link to='/'>App</Link>
+        <Link to='/'>&lt; /&gt; Code Typer</Link>
       </h1>
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
