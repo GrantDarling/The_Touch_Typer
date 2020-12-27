@@ -1,17 +1,10 @@
 const mongoose = require('mongoose');
 
-const sublevelSchema = new mongoose.Schema({
-  text: {
-    type: Array,
-    required: true,
-  },
-  unlocked: {
-    type: Boolean,
-    required: true,
-  },
-});
-
 const levelSchema = new mongoose.Schema({
+  path: {
+    type: String,
+    required: true,
+  },
   difficulty: {
     type: String,
     required: true,
@@ -20,18 +13,18 @@ const levelSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  easy: [sublevelSchema],
-  intermediate: [sublevelSchema],
-  advanced: [sublevelSchema],
+  description: {
+    type: String,
+    required: true,
+  },
+  content: {
+    type: Array,
+    required: true,
+  },
   unlocked: {
     type: Boolean,
     required: true,
   },
-  achievements: {
-    type: String,
-    required: true,
-  },
-  // url
 });
 
 module.exports = Levels = mongoose.model('levels', levelSchema);

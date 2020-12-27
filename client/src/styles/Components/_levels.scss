@@ -1,0 +1,27 @@
+.levels {
+  background: var(--main__bg);
+  color: var(--main__color);
+  box-shadow: -4px 8px 17px -8px var(--register-login--hightlight);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+
+  &:hover {
+    border: solid 1px var(--highlight);
+    box-shadow: none;
+  }
+}
+
+.levels__description {
+  font-family: $secondary-font-family;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.locked {
+  pointer-events: none;
+  .levels {
+    background: #6565652e;
+  }
+}

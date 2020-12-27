@@ -11,7 +11,6 @@ router.get('/', async (req, res) => {
   console.log('Server running on port 3000');
   try {
     let levels = await Level.find({});
-    //console.log(levels);
     res.json(levels);
   } catch (error) {
     res.status(400).send('Server error');
@@ -27,41 +26,25 @@ router.post('/', async (req, res) => {
     // 2. Send this to frontend
 
     const level1 = new Level({
+      path: 'level1',
       difficulty: '1',
       title: 'F & J',
-      easy: {
-        text: ['this is easy level1'],
-        unlocked: true,
-      },
-      intermediate: {
-        text: ['this is intermediate level1'],
-        unlocked: true,
-      },
-      advanced: {
-        text: ['this is advanced level1'],
-        unlocked: true,
-      },
+      description: "Typing challenge with the 'k' and 'j' keys",
+      content: [
+        'ffj jff j f jfj fj j ff jjj fjfj jjj f ffj jffj jff fj jf jfff jfjf jfj fj j f f jjf',
+      ],
       unlocked: true,
-      achievements: ObjectId('CFEADD'),
     });
 
     const level2 = new Level({
+      path: 'level2',
       difficulty: '2',
       title: 'Home Row',
-      easy: {
-        text: ['this is easy level2'],
-        unlocked: true,
-      },
-      intermediate: {
-        text: ['this is intermediate level2'],
-        unlocked: true,
-      },
-      advanced: {
-        text: ['this is advanced level2'],
-        unlocked: true,
-      },
-      unlocked: true,
-      achievements: ObjectId('ADEFCD'),
+      description: 'Typing challenge with the home row keys',
+      content: [
+        'jfds jkds ll;asl sldkfj a;slkdf jfl;sad a;skdjfda aslkdfja asldkjf askdda salkdfa sd',
+      ],
+      unlocked: false,
     });
 
     await level1.save();

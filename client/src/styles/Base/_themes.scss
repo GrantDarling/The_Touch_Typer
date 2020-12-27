@@ -8,8 +8,8 @@
   // Navbar
   --direction: auto;
   // Register / Login
-  --register-login--bg: #f2f0f0;
-  --register-login--font-color: black;
+  --main__bg: #f2f0f0;
+  --main__color: black;
   --register-login--hightlight: #585858;
 }
 .theme-dark {
@@ -23,7 +23,7 @@
   --direction: 0;
   --register__button--hightlight: #ffae8b;
   // Register / Login
-  --register-login--bg: #4e4e55;
-  --register-login--font-color: white;
+  --main__bg: #4e4e55;
+  --main__color: white;
   // --register-login--hightlight: rgba(240, 240, 240, 0.92);
 }

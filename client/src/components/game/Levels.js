@@ -8,11 +8,13 @@ const Levels = ({ levels }) => {
     levels.length > 0 &&
     levels.map((level) => {
       return (
-        <Link to={level.difficulty}>
-          <div key={level.id}>
-            <h1>
-              Level {level.difficulty} : {level.title}
+        <Link to={level.path} className={level.unlocked ? '' : 'locked'}>
+          <div className='levels' key={level.id}>
+            <h1 className='levels__title'>
+              Level {level.difficulty} : {level.title}{' '}
             </h1>
+            <p className='levels__description'>{level.description}</p>
+            {/* Check if locked */}
           </div>
         </Link>
       );
