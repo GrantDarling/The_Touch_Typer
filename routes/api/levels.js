@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
   console.log('Server running on port 3000');
   try {
     let levels = await Level.find({});
-    console.log(levels);
+    //console.log(levels);
     res.json(levels);
   } catch (error) {
     res.status(400).send('Server error');

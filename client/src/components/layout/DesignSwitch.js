@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import SunIcon from '../../../styles/Images/sun_icon.svg';
-import MoonIcon from '../../../styles/Images/moon_icon.svg';
-import toggleTheme from './logic/toggleTheme';
-import checkTheme from './logic/checkTheme';
+import SunIcon from '../../styles/Images/sun_icon.svg';
+import MoonIcon from '../../styles/Images/moon_icon.svg';
+import toggleTheme from '../logic/Navbar/toggleTheme';
+import checkTheme from '../logic/Navbar/checkTheme';
 
 const DesignSwitch = () => {
   useEffect(() => {

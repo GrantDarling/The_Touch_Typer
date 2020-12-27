@@ -1,0 +1,19 @@
+* {
+  font-family: $primary_font_family;
+}
+
+body {
+  font-style: normal;
+  font-weight: 400;
+
+  background-color: var(--background);
+  color: var(--font-color);
+}
+
+a {
+  font-size: 25px;
+  font-family: $primary_font_family;
+  text-decoration: none;
+  color: #dedede;
+  font-weight: bold;
+}

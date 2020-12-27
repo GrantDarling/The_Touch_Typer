@@ -5,6 +5,18 @@
 
 // Abstract
 @import 'styles/Abstract/fonts';
+@import 'styles/Abstract/variables';
+
+// Base
+@import 'styles/Base/reset';
+@import 'styles/Base/themes';
+@import 'styles/Base/base';
+
+// Layout
+@import 'styles/Layout/navbar';
 
 // Components
 @import 'styles/Components/design-switch';
+
+// Pages
+@import 'styles/Pages/landing';

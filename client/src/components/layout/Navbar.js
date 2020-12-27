@@ -1,8 +1,8 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logout } from '../../../redux/actions/auth';
+import { logout } from '../../redux/actions/auth';
 import DesignSwitch from './DesignSwitch';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
