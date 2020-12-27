@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-reduximport drawDisplay from '../logic/Game/drawDisplay';
+import { connect } from 'react-redux';
+import drawDisplay from '../logic/Game/drawDisplay';
 import playGame from '../logic/Game/gameLogic';
 
 const RenderGame = ({ name, achievements }) => {
