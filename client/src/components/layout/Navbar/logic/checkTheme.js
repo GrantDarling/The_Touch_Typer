@@ -1,4 +1,4 @@
-const isDarkMode = () => {
+const checkTheme = () => {
   let darkmode = localStorage.getItem('darkmode');
   let body = document.body;
 
@@ -15,4 +15,4 @@ const isDarkMode = () => {
   return null;
 };
 
-export default isDarkMode;
+export default checkTheme;

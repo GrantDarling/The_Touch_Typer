@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
 
+@font-face {
+  font-family: 'ocrabt';
+  src: url('fonts/ocrabt.eot');
+  src: url('fonts/ocrabt.eot') format('embedded-opentype'),
+    url('fonts/ocrabt.woff2') format('woff2'),
+    url('fonts/ocrabt.woff') format('woff'),
+    url('fonts/ocrabt.ttf') format('truetype'),
+    url('fonts/ocrabt.svg#ocrabt') format('svg');
+}
+
+* {
+  font-family: 'ocrabt', sans-serif;
+}
+
 * {
   font-family: 'PT Sans', sans-serif;
 }

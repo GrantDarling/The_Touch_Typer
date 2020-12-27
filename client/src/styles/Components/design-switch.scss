@@ -10,6 +10,7 @@
   --highlight: #ffae8b;
   --direction: 0;
 }
+
 body {
   background-color: var(--background);
   color: var(--font-color);
@@ -34,4 +35,10 @@ body {
   right: var(--direction);
   height: 100%;
   width: 50%;
+}
+
+body {
+  font-family: ocr-a-std, monospace;
+  font-style: normal;
+  font-weight: 400;
 }
