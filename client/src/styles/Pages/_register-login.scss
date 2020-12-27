@@ -1,0 +1,35 @@
+.login_register__container {
+  background: var(--register-login--bg);
+  color: var(--register-login--font-color);
+  padding: 3em;
+  border-radius: 10px;
+  box-shadow: -4px 8px 17px -8px var(--register-login--hightlight);
+  width: 200px;
+  height: 400px;
+  font-family: $secondary-font-family;
+
+  hr {
+    margin: 20px 0;
+  }
+
+  p {
+    font-family: $primary-font-family;
+    margin: 20px 0;
+  }
+}
+
+.login_register__form {
+  input {
+    width: 95%;
+    margin: 10px 0;
+    font-family: $secondary-font-family;
+    height: 40px;
+    border-radius: 10px;
+    border: solid gray 1px;
+    font-size: 14px;
+  }
+}
+
+.login__container {
+  height: 275px;
+}

@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setAlert } from '../../redux/actions/alert';
@@ -35,53 +36,61 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1>Sign-Up</h1>
-      <p>Create Your Account</p>
-      <form onSubmit={(e) => onSubmit(e)}>
+      <section className='login_register__container register__container'>
+        <h1 className='login_register__title'>Register</h1>
+        <form className='login_register__form' onSubmit={(e) => onSubmit(e)}>
+          <div>
+            <input
+              type='text'
+              placeholder='Name'
+              name='name'
+              value={name}
+              onChange={(e) => onChange(e)}
+              //required
+            />
+          </div>
+          <div>
+            <input
+              type='email'
+              placeholder='Email Address'
+              name='email'
+              value={email}
+              onChange={(e) => onChange(e)}
+              //required
+            />
+          </div>
+          <div>
+            <input
+              type='password'
+              placeholder='Password'
+              name='password'
+              value={password}
+              onChange={(e) => onChange(e)}
+              //minLength='6'
+            />
+          </div>
+          <div>
+            <input
+              type='password'
+              placeholder='Confirm Password'
+              name='password2'
+              value={password2}
+              onChange={(e) => onChange(e)}
+              //minLength='6'
+            />
+          </div>
+          <button type='submit' value='register'>
+            Register
+          </button>
+        </form>
+        <hr />
         <div>
-          <input
-            type='text'
-            placeholder='Name'
-            name='name'
-            value={name}
-            onChange={(e) => onChange(e)}
-            //required
-          />
+          <p className='login_register__p'>Have An Account?</p>
+          <Link to='/login'>
+            <button>Login</button>
+          </Link>
         </div>
-        <div>
-          <input
-            type='email'
-            placeholder='Email Address'
-            name='email'
-            value={email}
-            onChange={(e) => onChange(e)}
-            //required
-          />
-        </div>
-        <div>
-          <input
-            type='password'
-            placeholder='Password'
-            name='password'
-            value={password}
-            onChange={(e) => onChange(e)}
-            //minLength='6'
-          />
-        </div>
-        <div>
-          <input
-            type='password'
-            placeholder='Confirm Password'
-            name='password2'
-            value={password2}
-            onChange={(e) => onChange(e)}
-            //minLength='6'
-          />
-        </div>
-        <button type='submit' value='register'>
-          Register
-        </button>
-      </form>
+      </section>
     </Fragment>
   );
 };

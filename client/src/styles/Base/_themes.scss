@@ -2,16 +2,28 @@
   --background: #f2f0f0;
   --font-color: #677272;
   --highlight: #ffae8b;
+  // Landing
   --register__button--bg: #242323;
   --register__button--font: #f2f0f0;
+  // Navbar
   --direction: auto;
+  // Register / Login
+  --register-login--bg: #f2f0f0;
+  --register-login--font-color: black;
+  --register-login--hightlight: #585858;
 }
 .theme-dark {
   --background: #242323;
   --font-color: #677272;
   --highlight: #ffae8b;
+  // Landing
   --register__button--bg: #f2f0f0;
   --register__button--font: #242323;
-  --register__button--hightlight: #ffae8b;
+  // Navbar
   --direction: 0;
+  --register__button--hightlight: #ffae8b;
+  // Register / Login
+  --register-login--bg: #4e4e55;
+  --register-login--font-color: white;
+  // --register-login--hightlight: rgba(240, 240, 240, 0.92);
 }

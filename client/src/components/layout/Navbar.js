@@ -7,34 +7,46 @@ import DesignSwitch from './DesignSwitch';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <ul>
-      <li>
-        <Link to='/test'>Testing Grounds</Link>
-      </li>
-      <li>
-        <Link to='/login' onClick={logout}>
-          Logout
-        </Link>
-      </li>
-    </ul>
+    <Fragment>
+      <h1>
+        <Link to='/levels'>&lt; /&gt; Code Typer</Link>
+      </h1>
+
+      <ul>
+        <li>
+          <Link to='/levels'>Levels</Link>
+        </li>
+        <li>
+          <DesignSwitch />
+        </li>
+        <li>
+          <Link to='/login' onClick={logout}>
+            Logout
+          </Link>
+        </li>
+      </ul>
+    </Fragment>
   );
 
   const guestLinks = (
-    <ul>
-      <li>
-        <DesignSwitch />
-      </li>
-      <li>
-        <Link to='/login'>Login</Link>
-      </li>
-    </ul>
+    <Fragment>
+      <h1>
+        <Link to='/'>&lt; /&gt; Code Typer</Link>
+      </h1>
+
+      <ul>
+        <li>
+          <DesignSwitch />
+        </li>
+        <li>
+          <Link to='/login'>Login</Link>
+        </li>
+      </ul>
+    </Fragment>
   );
 
   return (
     <nav>
-      <h1>
-        <Link to='/'>&lt; /&gt; Code Typer</Link>
-      </h1>
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       )}

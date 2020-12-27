@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -23,38 +24,46 @@ const Login = ({ login, isAuthenticated }) => {
 
   // Redirect if logged in
   if (isAuthenticated) {
-    return <Redirect to='/dashboard' />;
+    return <Redirect to='/levels' />;
   }
 
   return (
     <Fragment>
-      <h1>Sign-In</h1>
-      <p>Sign Into Your Account</p>
-      <form onSubmit={(e) => onSubmit(e)}>
+      <section className='login_register__container login__container'>
+        <h1 className='login_register__title'>Login</h1>
+        <form className='login_register__form' onSubmit={(e) => onSubmit(e)}>
+          <div>
+            <input
+              type='email'
+              placeholder='Email Address'
+              name='email'
+              value={email}
+              onChange={(e) => onChange(e)}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type='password'
+              placeholder='Password'
+              name='password'
+              value={password}
+              onChange={(e) => onChange(e)}
+              minLength='6'
+            />
+          </div>
+          <button type='submit' value='login'>
+            Login
+          </button>
+        </form>
+        <hr />
         <div>
-          <input
-            type='email'
-            placeholder='Email Address'
-            name='email'
-            value={email}
-            onChange={(e) => onChange(e)}
-            required
-          />
+          <p className='login_register__p'>No Account?</p>
+          <Link to='/register'>
+            <button>Register</button>
+          </Link>
         </div>
-        <div>
-          <input
-            type='password'
-            placeholder='Password'
-            name='password'
-            value={password}
-            onChange={(e) => onChange(e)}
-            minLength='6'
-          />
-        </div>
-        <button type='submit' value='login'>
-          Login
-        </button>
-      </form>
+      </section>
     </Fragment>
   );
 };

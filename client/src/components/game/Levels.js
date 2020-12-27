@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const Levels = ({ levels }) => {
@@ -7,11 +8,13 @@ const Levels = ({ levels }) => {
     levels.length > 0 &&
     levels.map((level) => {
       return (
-        <div key={level.id}>
-          <h1>
-            Level {level.difficulty} : {level.title}
-          </h1>
-        </div>
+        <Link to={level.difficulty}>
+          <div key={level.id}>
+            <h1>
+              Level {level.difficulty} : {level.title}
+            </h1>
+          </div>
+        </Link>
       );
     })
   );
