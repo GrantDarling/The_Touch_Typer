@@ -1,5 +1,14 @@
+// Fonts
 $primary_font_family: 'PT Sans', sans-serif;
-$secondary-font-family: 'ocr-a-std', monospace;
+$secondary-font-family: 'ocrabt', monospace;
 
 // Colours
-$navbar-color: #4e4e55;
+$white: white;
+$white-seashell: #f2f0f0;
+$grey-mine-shaft: #242323;
+$grey-abbey: #4e4e55;
+$grey-nevada: #677272;
+
+// Navbar
+$navbar-color: $grey-abbey;
+$navbar-height: 33px;

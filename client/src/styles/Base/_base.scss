@@ -2,6 +2,12 @@
   font-family: $primary_font_family;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 body {
   font-style: normal;
   font-weight: 400;
@@ -16,4 +22,18 @@ a {
   text-decoration: none;
   color: #dedede;
   font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 55px);
+
+  button {
+    display: flex;
+    flex-direction: row;
+  }
 }

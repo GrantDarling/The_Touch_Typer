@@ -1,0 +1,26 @@
+.landing__header,
+.landing__slogan {
+  padding: 0 0 30px 0;
+}
+
+.landing__header {
+  font-size: 55px;
+  font-family: $secondary-font-family;
+}
+
+.landing__slogan {
+  font-size: 35px;
+  font-family: $primary-font-family;
+  font-weight: 100;
+
+  em {
+    color: var(--highlight);
+  }
+}
+
+.landing__buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 375px;
+}

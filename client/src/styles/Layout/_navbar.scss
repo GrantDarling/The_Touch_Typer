@@ -4,6 +4,7 @@ nav {
   justify-content: space-between;
   padding: 15px;
   box-shadow: 0 0 10px 0 #2c2b2b;
+  height: $navbar-height;
   ul {
     display: flex;
     justify-content: space-around;
