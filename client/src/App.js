@@ -39,7 +39,7 @@ const App = () => {
             <Switch>
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
-              <Route exact path='/test' component={RenderGame} />
+              <Route exact path='/level1' component={RenderGame} />
               <Route exact path='/levels' component={Levels} />
             </Switch>
           </section>

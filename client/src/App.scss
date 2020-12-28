@@ -1,5 +1,3 @@
-@import 'styles/test';
-
 // Vendors
 @import 'styles/Vendors/bourbon/bourbon';
 
@@ -19,6 +17,7 @@
 @import 'styles/Components/design-switch';
 @import 'styles/Components/alert';
 @import 'styles/Components/levels';
+@import 'styles/Components/game';
 
 // Pages
 @import 'styles/Pages/landing';

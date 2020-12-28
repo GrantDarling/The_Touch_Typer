@@ -81,13 +81,19 @@ let checkKey = (e) => {
 
 // Highlights the word for success or error
 let addHighlightClass = () => {
+  let firstWordDiv = document.getElementsByClassName('letter')[0];
   let lastwordDiv;
   let currentWord = document.getElementsByClassName('letter')[game.advancer]
     .parentNode.id;
   let wordDiv = document.querySelector(`#${currentWord}`);
   wordDiv.classList.add('word--active');
 
+  if (game.advancer <= 1) {
+    firstWordDiv.classList.add('cursor');
+  }
+
   if (game.advancer >= 1) {
+    firstWordDiv.classList.remove('cursor');
     let lastWord = document.getElementsByClassName('letter')[game.advancer - 1]
       .parentNode.id;
     let lastwordDiv = document.querySelector(`#${lastWord}`);
@@ -120,14 +126,14 @@ let startGame = (e) => {
   game.started = true;
   game.startTime = Date.now() / 60000;
   startScreen.style.display = 'none';
+  localStorage.setItem('gameStarted', 'true');
   renderCursor();
 };
 
 // Check if Games Over
 let isGameOver = () => {
   let totalWords = document.querySelectorAll('.word').length;
-  let totalSpaces = document.querySelectorAll('.space').length;
-  let totalElements = totalWords + totalSpaces;
+  let totalElements = totalWords * 2;
   let currentPosition = getCurrentWordPosition();
 
   if (currentPosition >= totalElements - 1) {
@@ -139,13 +145,24 @@ let isGameOver = () => {
 
 // End Game
 let endGame = () => {
-  alert('game is over!!!');
+  let game = document.getElementById('game');
+  let WPM = calculateWPM();
+  let accuracy = calculateAccuracy();
+
+  game.innerHTML = `Game Over! Your total WPM were ${WPM} & your accuracy was ${accuracy}%`;
 };
 
 // Play Game
 let playGame = (e) => {
   if (!game.started && e.key === ' ') {
     startGame(e);
+  }
+
+  let gameStarted = localStorage.getItem('gameStarted');
+  let startScreen = document.querySelector('#start-screen');
+
+  if (gameStarted) {
+    startScreen.style.display = 'none';
   }
 
   if (game.started) {

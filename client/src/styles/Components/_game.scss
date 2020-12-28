@@ -1,0 +1,60 @@
+#display {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 225px;
+  width: 500px;
+  overflow: hidden;
+}
+
+#start-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include position(absolute, 0 0 0 0);
+  font-family: $secondary-font-family;
+  color: white;
+  background-color: #1c1c1cf0;
+}
+
+#accuracy,
+#wpm {
+  font-family: $secondary-font-family;
+  border-bottom: solid 1px grey;
+  margin-bottom: 15px;
+}
+
+.word {
+  font-family: $primary-font-family;
+  padding: 0 1px;
+  margin: 5px;
+  font-size: 45px;
+  color: #1c1c1c;
+}
+
+.letter {
+  color: var(--font-color);
+}
+
+.space,
+.word-space {
+  content: '';
+  width: 5px;
+  height: 40px;
+}
+
+.cursor {
+  color: var(--highlight);
+}
+
+.word--active.space {
+  background: var(--highlight);
+}
+
+.key--fail {
+  color: #ff6f6f;
+}
+
+.key--fail.space {
+  content: 'space';
+}
